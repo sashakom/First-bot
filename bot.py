@@ -11,6 +11,7 @@ def start_bot(bot, update):
     mytext = """Привет, {}!
 Я просто бот и знаю только {}
     """.format(update.message.chat.first_name, '/start')
+    logging.info('Пользователь {} нажал /start'.format(update.message.chat.username))
     update.message.reply_text(mytext)
 
 def chat(bot, update):
